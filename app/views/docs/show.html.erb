@@ -1,0 +1,13 @@
+<h1><%= @doc.title %></h1>
+
+<p><%= @doc.body %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_doc_path(@doc) %></li>
+  <li><%= link_to "Destroy", doc_path(@doc), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
+
+<%= link_to "Doc page", docs_path %>
